@@ -1,0 +1,21 @@
+input::placeholder{
+    color: #000 !important;
+    font-weight: 600;
+}
+
+.field label:not(:last-child) {
+    margin-bottom: 10px !important;
+}
+
+.field:not(:last-child) {
+    margin-bottom: 20px !important;
+}
+
+@media (max-width: 1023px){
+    .navbar-menu {
+        display: block;
+        position: absolute;
+        width: 100%;
+        margin-bottom: 20px;
+    }    
+}

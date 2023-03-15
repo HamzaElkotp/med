@@ -1,0 +1,51 @@
+.Prload{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    background-color: #fff;
+    z-index: 10000;
+    position: fixed;
+    top: 0;
+}
+  
+.Prload div{
+    background-color: var(--main-color);
+    height: 12px;
+    width: 12px;
+    border-radius: 50%;
+    margin-right: 10px;
+    animation-name: up-load;
+    animation-duration: 1.6s;
+    animation-iteration-count:infinite;
+    animation-direction: alternate;
+    animation-timing-function: linear;
+}
+
+.one{
+    animation-delay: 1.6s;
+}
+
+.two{
+    animation-delay: 1.2s;
+}
+  
+.three{
+    
+    animation-delay: 0.8s;
+}
+  
+.four{
+    animation-delay: 0.4s;
+  }
+  
+.five{
+    animation-delay: 0s;
+}
+  
+@keyframes up-load{
+    to{
+      opacity: 0.05;
+    }
+}

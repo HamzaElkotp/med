@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" id="HTML">
+<head>
+    <title>الاسئلة | جميع الاسئلة</title>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <meta name="theme-color" content="#8e44ad">
+    <link rel="icon" type="image/png" href="/assets/images/logo.png"/>
+
+    <!-- assets -->
+    <link rel='stylesheet'  href='/assets/style/bulma-rtl.min.css'>
+    <link rel='stylesheet'  href='/assets/style/main.css'>
+    <link rel="stylesheet" href="/assets/style/all.min.css">
+    <link rel="stylesheet" href="/assets/style/preload.css">
+    <link rel="stylesheet" href="/assets/style/dashboard.css">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&display=swap" rel="stylesheet"> 
+
+</head>
+<body onload="preload()">
+<!--====================================== PreLoad Bar ========================================-->
+    <div class='Prload' id='Prload'>
+        <div class='one'></div>
+        <div class='two'></div>
+        <div class='three'></div>
+        <div class='four'></div>
+        <div class='five'></div>
+    </div>
+<!--====================================== PreLoad Bar ========================================-->
+
+
+<!--====================================== Side Nav Bar =======================================-->
+    <div class="sidebar">
+        <div class="logo_content">
+            <div class="logo is-flex is-align-items-center">
+                <i class="fas fa-desktop is-size-5"></i>
+                <div class="logo_name is-size-5 has-text-weight-semibold">لوحة التحكم</div>
+            </div>
+            <i class="fas fa-bars bar1" id="btn"></i>
+        </div>
+        <ul class="nav_list">
+            <li>
+                <a href="/" class="is-flex is-align-items-center">
+                    <i class="fas fa-home"></i>
+                    <span class="links_name">الرئيسية</span>
+                </a>
+                <span class="tooltip">الرئيسية</span>
+            </li>
+            <li>
+                <a href="/" class="is-flex is-align-items-center">
+                    <i class="fas fa-user-circle"></i>
+                    <span class="links_name">بيانات الطالب</span>
+                </a>
+                <span class="tooltip">بياناتي</span>
+            </li>
+            <li>
+                <a href="/lectures/" class="is-flex is-align-items-center">
+                    <i class="fas fa-chalkboard-teacher"></i>
+                    <span class="links_name">محاضراتي</span>
+                </a>
+                <span class="tooltip">محاضراتي</span>
+            </li>
+            <li>
+                <a href="/favorites/" class="is-flex is-align-items-center">
+                    <i class="fas fa-heart"></i>
+                    <span class="links_name">المفضلة</span>
+                </a>
+                <span class="tooltip">المفضلة</span>
+            </li>
+            <li>
+                <a href="/cart/" class="is-flex is-align-items-center">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="links_name">عربة الشراء</span>
+                </a>
+                <span class="tooltip">العربة</span>
+            </li>
+            
+            <li>
+                <a class="is-flex is-align-items-center"
+                onclick="document.getElementById('list1').classList.toggle('nexternal'),
+                document.getElementById('rot').classList.toggle('rotate180'),
+                document.getElementById('list2').classList.remove('nexternal'),
+                document.getElementById('rot2').classList.remove('rotate180'),
+                document.getElementById('list3').classList.remove('nexternal'),
+                document.getElementById('rot3').classList.remove('rotate180'),
+                mobileLinks()">
+                    <i class="fas fa-file-invoice-dollar"></i>
+                    <span class="links_name is-flex is-justify-content-space-between">الفواتير <i class="fas fa-angle-right" id="rot"></i></span>
+                </a>
+                <div class="listOld" id="list1">
+                    <p class="navLinksName"><a href="/bill/pendingOrders/">الطلبات المعلقة</a></p>
+                    <p class="navLinksName"><a href="/bill/completedOrders/">الطلبات المكتملة</a></p>
+                </div>
+                <span class="tooltip">الفواتير</span>
+
+                <li class="hideMobile toglleHide" id="HideLink1">
+                    <a href="/bill/pendingOrders/" class="is-flex is-align-items-center">
+                        <span>الطلبات المعلقة</span>
+                    </a>
+                    <a href="/bill/completedOrders/" class="is-flex is-align-items-center">
+                        <span>الطلبات المكتملة</span>
+                    </a>
+                </li>
+            </li>
+                
+            <li>
+                <a class="is-flex is-align-items-center is-active1"
+                onclick="document.getElementById('list2').classList.toggle('nexternal'),
+                document.getElementById('rot2').classList.toggle('rotate180'),
+                document.getElementById('list1').classList.remove('nexternal'),
+                document.getElementById('rot').classList.remove('rotate180'),
+                document.getElementById('list3').classList.remove('nexternal'),
+                document.getElementById('rot3').classList.remove('rotate180'),
+                mobileLinks2()">
+                    <i class="fas fa-question-circle"></i>
+                    <span class="links_name is-flex is-justify-content-space-between">الاسئلة <i class="fas fa-angle-right" id="rot2"></i></span>
+                </a>
+                <div class="listOld" id="list2">
+                    <p class="navLinksName"><a href="/MyQA/">اسئلتي</a></p>
+                    <p class="navLinksName is-active1"><a href="#">تقديم سؤال</a></p>
+                    <p class="navLinksName"><a href="/AllQA/">جميع الاسئلة</a></p>
+                </div>
+                <span class="tooltip">الاسئلة</span>
+
+                <li class="hideMobile toglleHide" id="HideLink2">
+                    <a href="/MyQA/" class="is-flex is-align-items-center">
+                        <span>اسئلتي</span>
+                    </a>
+                    <a href="#" class="is-flex is-align-items-center is-active1">
+                        <span>تقديم سؤال</span>
+                    </a>
+                    <a href="/AllQA/" class="is-flex is-align-items-center">
+                        <span>جميع الاسئلة</span>
+                    </a>
+                </li>
+            </li>   
+             
+            <li>
+                <a class="is-flex is-align-items-center"
+                onclick="document.getElementById('list3').classList.toggle('nexternal'),
+                document.getElementById('rot3').classList.toggle('rotate180'),
+                document.getElementById('list1').classList.remove('nexternal'),
+                document.getElementById('rot').classList.remove('rotate180'),
+                document.getElementById('list2').classList.remove('nexternal'),
+                document.getElementById('rot2').classList.remove('rotate180'),
+                mobileLinks3()">
+                    <i class="fas fa-headset"></i>
+                    <span class="links_name is-flex is-justify-content-space-between">الدعم الفني <i class="fas fa-angle-right" id="rot3"></i></span>
+                </a>
+                <div class="listOld" id="list3">
+                    <p class="navLinksName"><a href="/support/addFeedback">تقديم شكوى</a></p>
+                    <p class="navLinksName"><a href="/support/pendingOrders">الطلبات المعلقة</a></p>
+                    <p class="navLinksName"><a href="/support/completedOrders">الطلبات المكتملة</a></p>
+                </div>
+                <span class="tooltip">الدعم</span>
+
+                <li class="hideMobile toglleHide" id="HideLink3">
+                    <a href="/support/addFeedback" class="is-flex is-align-items-center">
+                        <span>تقديم شكوى</span>
+                    </a>
+                    <a href="/support/pendingOrders" class="is-flex is-align-items-center">
+                        <span>الطلبات المعلقة</span>
+                    </a>
+                    <a href="/support/completedOrders" class="is-flex is-align-items-center">
+                        <span>الطلبات المكتملة</span>
+                    </a>
+                </li>
+            </li>  
+        </ul>
+        <div class="profile_content">
+            <div class="profile">
+                <div class="profile_details is-flex is-align-items-center">
+                    <img src="https://via.placeholder.com/45" alt="">
+                    <div class="nameID">
+                        <div class="name has-text-weight-semibold">حمزة القطب</div>
+                        <div class="ID has-text-weight-semibold">#78432</div>
+                    </div>
+                </div>
+                <i class="fas fa-sign-out-alt log_out" id="log_out"></i>
+            </div>
+        </div>
+    </div>
+<!--====================================== Side Nav Bar =======================================-->
+
+
+<!--==================================== rest of page Bar =====================================-->
+    <div class="home_content">
+        <div class="container">
+            <h2 class="title is-3">طرح سؤال:</h2>
+            <div class="formASK">
+                <div class="field">
+                    <label class="label">عنوان الرسالة</label>
+                    <div class="control has-icons-left">
+                        <input class="input" type="text" placeholder="عنوان الرسالة">
+                        <span class="icon is-small is-left">
+                            <i class="fas fa-envelope-open-text"></i>
+                        </span>
+                    </div>
+                </div>
+
+                <div class="field">
+                    <label class="label">اسم الدرس</label>
+                    <div class="control has-icons-left">
+                        <input class="input" type="text" placeholder="اسم الدرس">
+                        <span class="icon is-small is-left">
+                            <i class="fas fa-chalkboard-teacher"></i>
+                        </span>
+                    </div>
+                </div>
+                  
+                <div class="field">
+                    <label class="label">الرسالة\السؤال</label>
+                    <div class="control">
+                        <textarea class="textarea" placeholder="السؤال"></textarea>
+                    </div>
+                </div>
+
+                <div class="field">
+                    <div id="file-upload" class="file has-name">
+                        <label class="file-label">
+                            <input class="file-input" type="file" name="resume">
+                            <span class="file-cta is-bg-purpel">
+                                <span class="file-icon">
+                                    <i class="fas fa-upload"></i>
+                                </span>
+                                <span class="file-label">ارفاق ملف</span>
+                            </span>
+                            <span class="file-name">لم يتم رفع ملف</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="field is-grouped">
+                    <div class="control">
+                        <button class="button is-link">ارسال</button>
+                    </div>
+                    <div class="control">
+                        <button class="button is-link is-light">الغاء</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<!--==================================== rest of page Bar =====================================-->
+
+</body>
+</html>
+
+<script>
+
+</script>
+
+
+<script src='//assets/javascript/dashboared.js'></script>
+<script src='//assets/javascript/preload.js'></script>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" id="HTML">
+<head>
+    <title>تسجيل الدخول | المداد التعليميه</title>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <meta name="theme-color" content="#8e44ad">
+    <link rel="icon" type="image/png" href="/assets/images/logo.png"/>
+
+    <!-- assets -->
+    <link rel='stylesheet' href='/assets/style/bulma-rtl.min.css'>
+    <link rel='stylesheet' href='/assets/style/main.css'>
+    <link rel='stylesheet' href='/assets/style/nav&footer.css'>
+    <link rel="stylesheet" href="/assets/style/all.min.css">
+    <link rel="stylesheet" href="/assets/style/popup.css">
+    <link rel="stylesheet" href="login.css">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&display=swap" rel="stylesheet"> 
+
+</head>
+<body>
+<!--======================================== Nav Bar ==========================================-->
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+            <a class="navbar-item logo" href="#">
+                <img src="/assets/images/logo.png">
+            </a>
+
+            <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample" onclick="navshow()">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </a>
+        </div>
+    
+        <div id="navbarBasicExample" class="navbar-menu">
+            <div class="navbar-start">
+                <a class="navbar-item" href="/">الرئيسية</a>
+                <a class="navbar-item" onclick="charge()"><i class="fas fa-wallet"></i>الرصيد<span id="salary">0</span>جنيه</a>
+                <a class="navbar-item">حساب ولي الامر</a>
+            </div>
+
+            <div class="navbar-end">
+                <div class="navbar-item">
+                    <div class="buttons">
+                        <a class="button is-primary is-outlined" href="register/">حساب جديد</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+<!--======================================== Nav Bar ==========================================-->
+
+
+
+    <section class="hero is-colorbg-purpel is-fullheight">
+        <div class="hero-body">
+            <div class="container">
+                <div class="columns is-centered">
+                    <div class="column is-5">
+                        <form action="" class="box">
+                            <div class="field">
+                                <label for="" class="label">الايميل</label>
+                                <div class="control has-icons-right">
+                                    <input class="input" type="email" placeholder="الايميل" required>
+                                    <span class="icon is-small is-right">
+                                        <i class="fa fa-envelope"></i>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="field">
+                                <label for="" class="label">كلمة المرور</label>
+                                <div class="control has-icons-right">
+                                    <input class="input" type="password" placeholder="كلمة المرور" required>
+                                    <span class="icon is-small is-right">
+                                        <i class="fa fa-lock"></i>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="field">
+                                <label for="remeber" class="checkbox">
+                                <input type="checkbox" id="remeber">تذكرني</label>
+                            </div>
+                            <div class="field">
+                                <button class="button is-bg-purpel">تسجيل الدخول</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<!--====================================== charge Pop Up =======================================-->
+    <article class="message charge" id="charge">
+        <div class="message-body">
+            <a href="/charge/"><div class="card">
+                <div class="card-content has-text-centered">
+                    <h3 class="title is-4 is-purpel">شحن المحفظة</h3>
+                </div>
+            </div></a>
+        </div>
+    </article>
+<!--====================================== charge Pop Up =======================================-->
+
+</body>
+</html>
+<script src='/assets/javascript/javascript.js'></script>

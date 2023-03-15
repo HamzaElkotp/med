@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" id="HTML">
+<head>
+    <title>لوحة التحكم | محاضرة جديدة</title>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <meta name="theme-color" content="#8e44ad">
+    <link rel="icon" type="image/png" href="/assets/images/logo.png" />
+    <!-- assets -->
+    <link rel='stylesheet'  href='/assets/style/bulma-rtl.min.css'>
+    <link rel='stylesheet'  href='/assets/style/main.css'>
+    <link rel="stylesheet" href="/assets/style/all.min.css">
+    <link rel="stylesheet" href="/assets/style/admin-dash.css">
+
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/dt-1.10.25/datatables.min.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.1/css/bulma.min.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.25/css/dataTables.bulma.min.css"/>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" charset="utf-8"></script>
+
+
+    <script>
+        window.addEventListener('beforeunload', (event) => {
+            event.returnValue = `Are you sure you want to leave?`;
+        });
+    </script>
+</head>
+<body>
+    <!--====================================== Side Nav Bar =======================================-->
+        <div class="menu-btn">
+            <i class="fas fa-bars"></i>
+        </div>
+        <div class="side-bar">
+            <div class="close-btn">
+                <i class="fas fa-times"></i>
+            </div>
+            <div class="menu">
+                <div class="item">
+                    <a href="/"><i class="fas fa-home"></i>الرئيسية</a>
+                </div>
+                <div class="item">
+                    <a class="sub-btn is-actives"><i class="fas fa-chalkboard"></i>المحاضرات<i class="fas fa-angle-right dropdown"></i></a>
+                    <div class="sub-menu">
+                        <a href="#" class="sub-item is-actives">محاضرة جديدة</a>
+                        <a href="/all-lecture/" class="sub-item">جميع المحاضرات</a>
+                    </div>
+                </div>
+                <div class="item">
+                    <a href="/all-quiz/" class="sub-item"><i class="fas fa-file"></i>جميع الاختبارات</a>
+                </div>
+                <div class="item">
+                    <a class="sub-btn"><i class="fas fa-user-graduate"></i>الطلبة<i class="fas fa-angle-right dropdown"></i></a>
+                    <div class="sub-menu">
+                        <a href="/student-conform/" class="sub-item">تأكيد الطلبة</a>
+                        <a href="/all-student/" class="sub-item is-actives">جميع الطلبة</a>
+                    </div>
+                </div>
+                <div class="item">
+                    <a class="sub-btn"><i class="fas fa-pallet"></i>الطلبات<i class="fas fa-angle-right dropdown"></i></a>
+                    <div class="sub-menu">
+                        <div class="item SubItem">
+                            <a class="sub-btn"><i class="fas fa-question"></i>الاسئلة<i class="fas fa-angle-right dropdown"></i></a>
+                            <div class="sub-menu">
+                                <a href="/QRemain/" class="sub-item">الأسئلة المتبقية</a>
+                                <a href="/AllQS/" class="sub-item">جميع الاسئلة</a>
+                            </div>
+                        </div>
+                        <div class="item SubItem">
+                            <a class="sub-btn"><i class="fas fa-headset"></i>الدعم الفني<i class="fas fa-angle-right dropdown"></i></a>
+                            <div class="sub-menu">
+                                <a href="/Supp-Remain" class="sub-item">الأسئلة المتبقية</a>
+                                <a href="/All-SuppRemain" class="sub-item">جميع الاسئلة</a>
+                            </div>
+                        </div>
+                        <div class="item SubItem">
+                            <a class="sub-btn"><i class="fas fa-charging-station"></i>شحن الرصيد<i class="fas fa-angle-right dropdown"></i></a>
+                            <div class="sub-menu">
+                                <a href="/Charge-Remain/" class="sub-item">الأسئلة المتبقية</a>
+                                <a href="/All-Charge" class="sub-item">جميع الطلبات</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <a class="sub-btn"><i class="fas fa-cogs"></i>اعدادات المنصة<i class="fas fa-angle-right dropdown"></i></a>
+                    <div class="sub-menu">
+                        <a href="/Set-alert/" class="sub-item"><i class="fas fa-exclamation"></i>التنبيهات</a>
+                        <a href="/Set-Noti" class="sub-item">الاشعارات</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <!--====================================== Side Nav Bar =======================================-->
+
+
+
+    <!--========================================= menu Bar =========================================-->
+        <section class="main">
+            <h1 class="title is-3">محاضرة جديدة</h1>
+            <form action="" id="new-lecture">
+                <div class="columns is-multiline">
+                    <div class="field column is-4">
+                        <label class="label">اسم المحاضرة:</label>
+                        <div class="control">
+                            <input class="input" type="text">
+                        </div>
+                    </div>
+                      
+                    <div class="field column is-4">
+                        <label class="label">سعر المحاضرة:</label>
+                        <div class="control">
+                            <input class="input" type="text">
+                        </div>
+                    </div>
+
+                    <div class="field column is-4">
+                        <label class="label">تاريخ المحاضرة:</label>
+                        <div class="control">
+                            <input class="input" type="date">
+                        </div>
+                    </div>
+
+                    <div class="field column is-4">
+                        <label class="label">زمن المحاضرة:</label>
+                        <div class="control">
+                            <input class="input" type="text">
+                        </div>
+                    </div>
+
+                    <div class="field column is-4">
+                        <label class="label">عدد مرات المشاهدة المسموح بيها:</label>
+                        <div class="control">
+                            <input class="input" type="number">
+                            <button class="button is-primary change1">تحديث البيانات</button>
+                        </div>
+                    </div>
+
+                    <div class="field column is-4 saff">
+                        <label class="label">الصف الدراسي: 
+                        <div class="control">
+                            <div class="select">
+                                <select>
+                                    <option>الصف الاول</option>
+                                    <option>الصف الثاني</option>
+                                    <option>الصف الثالث</option>
+                                </select>
+                            </div>
+                        </div>
+                        </label>
+                    </div>
+
+                    <div class="field column is-12">
+                        <label class="label">وصف المحاضرة</label>
+                        <div class="control">
+                            <textarea class="textarea" required></textarea>
+                        </div>
+                    </div>
+
+                    <div class="field column is-6 file is-boxed has-name" id="file-js-example">
+                        <label class="file-label">
+                          <input class="file-input" type="file" name="resume" multiple id="adds">
+                          <span class="file-cta">
+                            <span class="file-icon"><i class="fas fa-cloud-upload-alt is-blue"></i></span>
+                            <span class="file-label">ملحقات (اضغط للاضافة)</span>
+                          </span>
+                          <div class="file-name file-name1">لم يتم رفع اي ملف</div>
+                        </label>
+                    </div>
+
+                    <div class="field column is-6 file is-boxed has-name" id="file-js-example1">
+                        <label class="file-label">
+                          <input class="file-input" type="file" name="resume" multiple id="lecturebg">
+                          <span class="file-cta">
+                            <span class="file-icon"><i class="fas fa-cloud-upload-alt is-blue"></i></span>
+                            <span class="file-label">صورة المحاضرة</span>
+                          </span>
+                          <div class="file-name file-name2">لم يتم رفع اي ملف</div>
+                        </label>
+                    </div>
+                    
+                </div>
+                <br><hr><br>
+                <h2 class="title is-3">الاختبار:</h2>
+                <div class="container" id="QeuS">
+                    <div id="question newQuestion" class="question">
+                        <button onclick="this.parentNode.remove()" class="button is-danger">حذف</button>
+                        <div class="field">
+                            <label class="label">رأس السؤال</label>
+                            <div class="control">
+                                <input class="input" type="text">
+                            </div>
+                        </div>
+                        
+                        <div class="field">
+                            <label class="label">درجة السؤال</label>
+                            <div class="control">
+                                <input class="input" type="number">
+                            </div>
+                        </div>
+                
+                        <div class="field">
+                            <input class="" type="checkbox">السؤال صورة؟
+                        </div>
+                        <div class="field">
+                            <label class="label">السؤال</label>
+                            <div class="control">
+                                <textarea class="textarea" required></textarea>
+                            </div>
+                        </div>
+                
+                        <div class="field">
+                            <label class="label">الاجابة</label>
+                            <div class="control answers" id="answers">
+                                <input placeholder="الاختيار الصحيح" type="text">
+                                <input type="text">
+                                <a onclick="$(this).prev().remove()" class="button is-small is-danger">حذف</a>
+                            </div>
+                            <a class="button is-link">اضافة اختيار</a>
+                        </div>
+                        <hr>
+                    </div>
+                </div>
+
+                <a class="button is-link">اضافة سؤال</a>
+            </form>
+            <div class="control contrel">
+                <button class="button is-primary">اضف المحاضرة والاختبار</button>
+            </div>
+        </section>
+    <!--========================================= menu Bar =========================================-->
+
+</body>
+</html>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" charset="utf-8"></script>
+<script type="text/javascript" src="https://cdn.datatables.net/v/dt/dt-1.10.25/datatables.min.js"></script>
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.js"></script>
+<script type="text/javascript" src="https://cdn.datatables.net/1.10.25/js/jquery.dataTables.min.js"></script>
+<script type="text/javascript" src="https://cdn.datatables.net/1.10.25/js/dataTables.bulma.min.js"></script>
+<script src="/assets/javascript/admin-dash.js"></script>
+
+

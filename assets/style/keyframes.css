@@ -1,0 +1,86 @@
+.writeing {
+    white-space: nowrap;
+    overflow: hidden;
+    width: 0px;
+    height: 60px;
+    animation: writing 5s steps(500) 1;
+    animation-direction:alternate-reverse;
+    animation-fill-mode: forwards;
+    background-color: #f5f6fa;
+}
+@keyframes writing {
+    from {
+        width: 100%;
+        animation-delay: 20s;
+    }
+}
+
+
+.hero .image-cont{
+    transform: translateY(0);
+    animation: imgMove 1.5s steps(500) infinite;
+    animation-direction:alternate;
+}
+@keyframes imgMove {
+    to {
+        transform: translateY(25px);
+        animation-delay: 1s;
+    }
+}
+
+
+.navbar-dropdown, .notificate, .charge  {
+    animation: navAnim 0.3s ease-in-out;
+}
+@keyframes navAnim {
+  0% {
+    display: none;
+    opacity: 0;
+  }
+  1% {
+    display: block;
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+
+@keyframes navMenu {
+  0% {
+    display: none;
+    width: 0;
+  }
+  1% {
+    display: block;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+
+
+.noti1, .noti2, .noti3{
+  animation: NotiPop 17s !important;
+  animation-fill-mode: forwards !important;
+  animation-iteration-count: 1 !important;
+}
+
+@keyframes NotiPop {
+  0%{
+    margin-right: -500px;
+  }
+  2%{
+    margin-right: 10px;
+  }
+  90%{
+    opacity: 1;
+  }
+  100%{
+    margin-right: 10px;
+    opacity: 0;
+  }
+}
+

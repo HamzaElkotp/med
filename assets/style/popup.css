@@ -1,0 +1,191 @@
+/*=================================== notification Style ===================================*/
+.notificate {
+    position: absolute;
+    display: none;
+    top: 60px;
+    z-index: 30;
+    border-radius: 0;
+    max-width: 400px;
+    min-width: 300px;
+    height: 550px;
+    overflow-y: auto;
+    left: 6px;
+    border-top: 3px solid var(--main-color);
+    border-bottom: 1px solid var(--main-color);
+    background-color: #fff !important;
+}
+
+.notificate .card{
+    box-shadow:none
+}
+
+.notificate  .message-body {
+    border-left: 0 !important;
+    padding: 0 !important;
+}
+
+.notificate  .card-content {
+    padding: 1.1rem !important;
+    border-bottom: var(--borderB);
+}
+
+.notificate .labels{
+    margin-top: 6px;
+} 
+
+.notificate .labels .DrName{
+    font-size: 0.78rem !important;
+    margin-left: 8px;
+} 
+/*=================================== notification Style ===================================*/
+
+/*====================================== charge Style ======================================*/
+.charge {
+    position: absolute;
+    display: none;
+    top: 67px;
+    z-index: 50;
+    border-radius: 0;
+    width: 300px;
+    height: 50px;
+    right: 15%;
+}
+
+.charge .card-content{
+    border: var(--borderB);
+}
+
+.charge  .message-body {
+    border-left: 0 !important;
+    padding: 0 !important;
+}
+/*====================================== charge Style ======================================*/
+
+/*===================================== discount Style =====================================*/
+.message.discount {
+    background-image: url(/images/bg.png);
+    background-size: 50%;
+    margin-bottom: 20px;
+}
+
+.discount h4 {
+    width: 100%;
+    text-align: center;
+}
+
+.message.discount img{
+    border-radius: 6px;
+}
+
+.message-header {
+    background-color: #f7f7f7;
+    border-bottom: 1px solid #888;
+}
+
+.discount .subtitle.is-4 {
+    background-color: #f7f7f7;
+}
+
+.popup .overlay {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 200;
+    display: none;
+}
+
+.popup .content1 {
+    position: fixed;
+    transform: translate(-50%, -50%) scale(0);
+    top: 50%;
+    left: 50%;
+    min-width: 350px;
+    z-index: 210;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.popup.active .overlay {
+    display: block;
+}
+
+.popup.active .content1 {
+    transition: all 200ms ease-in-out;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.slid_Dots {
+    padding: 4px 14px;
+    color: var(--main-color);
+    background-color: var(--second-color);
+    
+    border: 1px solid;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.slid_Dots:hover{
+    color: var(--second-color);
+    background-color: var(--main-color);
+}
+
+.fas.fa-angle-left {
+    padding-left: 0;
+}
+
+/*===================================== discount Style =====================================*/
+
+/*=================================== notifications Style ===================================*/
+.pops-conatainer {
+    position: fixed;
+    top: 50%;
+    z-index: 230;
+    display: none;
+    transform: translateY(-50%);
+}
+
+.notifications {
+    min-width: 320px;
+    max-width: 450px;
+    margin-right: -500px;
+}
+/*=================================== notifications Style ===================================*/
+
+.shadows{
+    width: 100%;
+    height: 100%;
+    background-color: rgba( 128, 139, 150, 0.3);
+    z-index: 300;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+}
+.buy-pop {
+    width: 450px;
+    height: max-content;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    background-color: var(--second-color);
+    transform: translate(-50%, -50%);
+    border-radius: 4px;
+    z-index: 300;
+    padding: 30px 10px;
+    display: none;
+}
+.buy-pop h4 {
+    margin-top: 20px;
+}
+.buy-pop .is-flex.is-flex-wrap-wrap {
+    width: 210px;
+    justify-content: space-between;
+    margin: 20px auto 0;
+}
+.buy-pop .button.is-danger {
+    padding: 22px;
+}
+

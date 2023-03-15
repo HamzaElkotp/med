@@ -1,0 +1,446 @@
+/***************************** Slide Bar styyle *****************************/
+body{
+    width: 100%;
+    overflow: hidden;
+}
+
+html{
+    background-color: #e4e4e4;
+}
+
+
+.sidebar{
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 78px;
+    background-color: #26132d;
+    padding: 6px 14px;
+    border-radius: 12px 0 0 12px;
+    transition: all 0.5s ease-in-out;
+    z-index: 100;
+}
+.sidebar.active{
+    width: 240px;
+}
+
+.sidebar .logo, .sidebar ul, .sidebar ul li a, .sidebar .profile_content{
+    color: #f6f6f6;
+}
+
+.sidebar .logo{
+    width: 100%;
+    height: 50px;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s;
+}
+
+.sidebar.active .logo{
+    opacity: 1;
+    pointer-events: none;
+}
+
+.sidebar .logo i{
+    margin-left: 5px;
+}
+
+.sidebar .bar1{
+    color: #f6f6f6;
+    position: absolute;
+    left: 50%;
+    top: 6px;
+    height: 50px;
+    width: 50px;
+    text-align: center;
+    line-height: 54px;
+    transform: translateX(-50%);
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.sidebar.active .bar1{
+    right: 70%;
+}
+
+.sidebar ul{
+    margin-top: 20px;
+}
+
+.sidebar ul li{
+    position: relative;
+    height: 45px;
+    width: 100%;
+    line-height: 45px;
+    margin-bottom: 5px;
+}
+
+.sidebar ul li .tooltip{
+    position: absolute;
+    right: 5px;
+    top: 0;
+    transform: translate(-50%, -50%);
+    border-radius: 6px;
+    height: 35px;
+    width: 122px;
+    line-height: 35px;
+    background-color: #f6f6f6;
+    text-align: center;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    color: #26132d;
+    transition: 0;
+    opacity: 0;
+    display: block;
+    z-index: 300;
+}
+
+.sidebar ul li a:not(.navLinksName a){
+    transition: all 0.5s;
+    border-radius: 12px;
+    white-space: nowrap;
+}
+
+.sidebar ul li a:hover:not(.navLinksName a){
+    color: #26132d;
+    background-color: #f6f6f6;
+}
+
+.sidebar ul li .is-active1{
+    background-color: #3e194c;
+}
+
+.sidebar ul li a i{
+    height: 40px;
+    min-width: 50px;
+    border-radius: 12px;
+    line-height: 40px;
+    text-align: center;
+    padding-left: 0;
+}
+
+.sidebar .links_name{
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s;
+}
+
+.sidebar.active .links_name{
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.sidebar .profile_content{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+}
+
+.sidebar .profile_content .profile{
+    position: relative;
+    padding: 10px 20px;
+    height: 63px;
+    background-color: transparent;
+    border-radius: 0 0 0 12px;
+}
+
+.sidebar.active .profile_content .profile{
+    background-color: #351740;
+}
+
+.sidebar .profile_content .profile_details{
+    opacity: 0;
+    pointer-events: none;
+    white-space: nowrap;
+    transition: all 0.3s;
+}
+
+.sidebar.active .profile_content .profile_details{
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.sidebar .profile_details img{
+    object-fit: cover;
+    border-radius: 12px;
+    height: 45px;
+    width: 45px;
+}
+
+.sidebar .profile_details .nameID{
+    margin-right: 10px;
+}
+
+.sidebar .profile_details .name{
+    font-size: 16px;
+}
+
+.sidebar .profile_details .ID{
+    font-size: 14px;
+}
+
+.sidebar .profile .log_out{
+    position: absolute;
+    left: 50%;
+    bottom: 8px;
+    transform: translateX(-50%);
+    min-width: 45px;
+    line-height: 47px;
+    font-size: 20px;
+    border-radius: 12px;
+    text-align: center;
+    padding-left: 0;
+    cursor: pointer;
+    background-color: #351740;
+
+}
+
+.sidebar.active .profile .log_out{
+    right: 63%;
+}
+
+.home_content{
+    position: absolute;
+    height: 100%;
+    width: calc(100% - 78px);
+    right: 78px;
+    transition: all 0.9s;
+    padding: 30px 24px;
+}
+
+.sidebar.active ~ .home_content{
+    width: calc(100% - 240px);
+    right: 240px;
+}
+
+/***************************** Slide Bar styyle *****************************/
+
+.textsF{
+    padding-right: 16px;
+}
+.textsF .has-text-primary{
+    color: rgb(0, 158, 134) !important;
+}
+
+.home_content .help{
+    font-size: 14px;
+}
+
+.home_content .field:nth-of-type(2){
+    margin-bottom: 35px;
+}
+
+.home_content .panel{
+    margin-right: 12px;
+    margin-left: 2px;
+    background-color: rgb(243, 243, 243);
+    font-size: 18px;
+}
+
+.home_content .panel i{
+    line-height: 28px;
+}
+
+.home_content .panel-heading {
+    background-color: #512461;
+    color: #f7f7f7;
+    padding: 0.70rem 20px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+.manues{
+    display: none;
+}
+
+.fas.fa-angle-right, .fas.fa-angle-left{
+    line-height: 44px;
+    width: 108%;
+    font-size: 20px;
+    transition: 0.4s;
+    position: absolute;
+    right: 72px;
+}
+
+.rotate180{
+    transform: translate(0%, 15%) rotate(180deg);
+}
+.rotate90{
+    transform: translate(0%, 10%) rotate(90deg);
+}
+
+.home_content .linksDot {
+    padding: 12px 30px;
+    font-size: 17px;
+    background-color: rgb(243, 243, 243);
+    transition: all 0.3s;
+}
+
+.home_content .linksDot:hover {
+    background-color: rgb(231, 231, 231);
+    color: #512461;
+}
+.home_content .linksDot:first-child {
+    margin-bottom: 3px;
+}
+
+.home_content #llremove2{
+    display: none;
+}
+
+.home_content .field:nth-of-type(2) .input.is-purple {
+    margin-bottom: 12px;
+}
+
+.home_content .control .button.is-info{
+    transition: 0.4s;
+    position: absolute;
+    top: 1px;
+    height: 38px;
+    border-bottom-right-radius: 0;
+    border-top-right-radius: 0;
+}
+#changeE2, #changeP3 {
+    right: 0;
+}
+#changeN1 {
+    left: 0 !important;
+}
+
+.hideB{
+    opacity: 0;
+    pointer-events: none;
+}
+
+.home_content .field:last-of-type {
+    margin-bottom: 30px;
+}
+
+.sidebar .nexternal {
+    display: block;
+    z-index: 400;
+}
+
+.listOld{
+    display: none;
+    position: absolute;
+    right: 100%;
+    top: 0;
+    margin-right: 14px;
+    z-index: 310;
+    background-color: #26132d;
+    min-width: 140px;
+    border-radius: 6px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    overflow: hidden;
+    border-right: 2px solid #512461;
+    z-index: -100;
+    transition: all 0.3s;
+}
+
+.fa-angle-left{
+    display: none;
+}
+
+.navLinksName{
+    padding: 0px 8px;
+    transition: all 0.8s;
+}
+.navLinksName:hover{
+    background-color: #351740 !important;
+    color: #e4e4e4 !important;
+}
+
+.hideMobile {
+    padding-right: 50px;
+    height: max-content !important;
+}
+.toglleHide{
+    display: none;
+}
+.hideMobile a{
+    padding-right: 15px;
+}
+
+
+.asksMedia{
+    padding: 20px;
+    border-bottom: 2px solid #f6f6f6;
+}
+
+.feedbackImage{
+    padding-top: 15px;
+}
+
+.file-label {
+    width: 100% !important;
+    border: 1px solid var(--main-color);
+    border-radius: 5px;
+}
+
+.file-name{
+    width: 100% !important;
+}
+
+.formASK {
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.cardin{
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
+
+
+
+.dataTables_wrapper .select:not(.is-multiple):not(.is-loading)::after {
+left: 50px !important;
+}
+
+table.dataTable > thead .sorting::after{
+right: 1.5em !important;
+}
+
+.dataTables_wrapper::after {
+min-width: 900px !important;
+}
+
+table.dataTable td, table.dataTable th{
+text-align: center !important;
+}
+
+.title{
+margin-bottom: 5px;
+color: #1a1a1a !important;
+}
+
+#users{
+overflow: hidden;
+}
+
+form .columns {
+width: 100%;
+}
+
+.spl {
+line-height: 35px;
+}
+
+.spl .select {
+width: 72%;
+}
+
+.spl select {
+width: 100%;
+}
+
+table {
+direction: ltr;
+}
+.columns.is-gapless.is-multiline {
+direction: ltr;
+}

@@ -1,0 +1,291 @@
+html{
+    background-color: #773986;
+    background-image: url('/images/bg.png');
+    height: 100%;
+    width: 100%;
+}
+
+body{
+    overflow: clip !important;
+}
+
+nav{
+    background-color: #f7fcfd !important;
+    z-index: 400 !important;
+}
+
+.error{
+    overflow: hidden !important;
+    width: 100%;
+    height: 100%;
+}
+
+.error-circle1{
+    background-color: #773986;
+    width: 800px;
+    height: 800px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    box-shadow: inset 0px 0px 40px rgb(36, 36, 36);
+    transition: opacity 1s;
+}
+
+.error-circle2{
+    background-color: var(--main-color);
+    width: 650px;
+    height: 650px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    box-shadow: inset 0px 0px 40px rgb(36, 36, 36);
+    opacity: 0.7;
+    border: 2px solid #2e2e2e;
+    z-index: 100;
+}
+
+.cont{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 300;
+}
+
+.stitle{
+    color: #fff;
+    font-size: 140px !important;
+    font-weight: 800;
+    letter-spacing: 10px;
+    z-index: 100;
+    margin-bottom: -30px;
+}
+.textt{
+    color: #fff;
+    font-weight: 700;
+    z-index: 300;
+}
+.btn{
+    z-index: 300;
+    padding: 5px 21px;
+    height: max-content;
+    width: max-content;
+    background-color: #fff;
+    border-radius: 50px;
+    color: #535353;
+    font-size: 18px;
+    transition: 0.5s;
+    border: 2px solid #fff;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+}
+.btn:hover{
+    border: 2px solid #fff;
+    color: #fff;
+    background-color: transparent;
+}
+
+
+.animations .first{
+    width: 160px;
+    height: 40px;
+    background: linear-gradient(90deg, rgba(174,241,252,1) 0%, rgba(0,155,247,1) 62%); 
+    border-radius: 50px;
+    animation: ani1 6s;
+    animation-direction: alternate-reverse;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    position: absolute;
+    left: 10%;
+    top: 10%;
+}
+.animations .second{
+    width: 140px;
+    height: 35px;
+    background: linear-gradient(90deg, rgba(247,107,0,1) 50%, rgba(252,211,174,1) 100%);
+    border-radius: 50px;
+    animation: ani2 4s;
+    animation-direction: alternate-reverse;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+}
+.animations .third{
+    width: 30px;
+    height: 30px;
+    background: linear-gradient(90deg, rgba(221,207,0,1) 50%, rgba(250,255,169,1) 100%);
+    border-radius: 50%;
+    animation: ani3 5s;
+    animation-direction: alternate-reverse;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    position: absolute;
+    top: 20%;
+    left: 40%;
+    z-index: 200;
+}
+.animations .fourth{
+    width: 170px;
+    height: 45px;
+    background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%);
+    border-radius: 15px;
+    animation: ani4 3s;
+    animation-direction: alternate-reverse;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    position: absolute;
+    top: 60%;
+    left: 10%;
+}
+.animations .fifth{
+    width: 120px;
+    height: 30px;
+    background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+    border-radius: 50px;
+    animation: ani5 4s;
+    animation-direction: alternate-reverse;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    position: absolute;
+    top: 55%;
+    left: 5%;
+    z-index: 110;
+}
+.animations .six{
+    width: 300px;
+    height: 35px;
+    background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 100%);
+    border-radius: 50px;
+    animation: ani6 7s;
+    animation-direction: alternate-reverse;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    position: absolute;
+    top: 80%;
+    right: 3%;
+}
+.animations .seven{
+    width: 100px;
+    height: 20px;
+    background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);
+    border-radius: 50px;
+    animation: ani7 10s;
+    animation-direction: alternate-reverse;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    position: absolute;
+    top: 70%;
+    right: 5%;
+}
+.animations .eghit{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: linear-gradient(90deg, rgba(252,176,69,1) 23%, rgba(253,29,29,1) 100%);
+    animation: ani8 8s;
+    animation-direction: alternate-reverse;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    position: absolute;
+    top: 0%;
+    left: 5%;
+}
+.animations .nine{
+    width: 40px;
+    height: 100px;
+    border-radius: 40px;
+    background: linear-gradient(0deg, rgba(164,69,252,1) 25%, rgba(29,253,220,1) 100%);
+    animation: ani9 6s;
+    animation-direction: alternate-reverse;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    position: absolute;
+    top: 0%;
+    left: 30%;
+    z-index: 200;
+}
+.animations .tenth{
+    width: 40px;
+    height: 40px;
+    border-radius: 25px;
+    background: radial-gradient(circle, rgba(164,69,252,1) 0%, rgba(253,29,48,1) 100%);
+    animation: ani10 6s;
+    animation-direction: alternate-reverse;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    position: absolute;
+    top: 0%;
+    left: 50%;
+}
+
+@keyframes ani1{
+    to{
+        left: 77%;
+        width: 80px;
+    }
+}
+@keyframes ani2{
+    to{
+        left: 70%;
+        width: 100px;
+    }
+}
+@keyframes ani3{
+    to{
+        width: 70px;
+        height: 70px;
+    }
+}
+@keyframes ani4{
+    to{
+        left: 60%;
+        width: 120px;
+        background: radial-gradient(circle, rgba(252,70,107,1) 100%, rgba(63,94,251,1) 100%);
+    }
+}
+@keyframes ani5{
+    to{
+        left: 50%;
+        width: 180px;
+    }
+}
+@keyframes ani6{
+    to{
+        right: 98%;
+        width: 10px;
+    }
+}
+@keyframes ani7{
+    to{
+        right: 95%;
+        width: 400px;
+    }
+}
+@keyframes ani8{
+    to{
+        top: 100%;
+    }
+}
+@keyframes ani9{
+    to{
+        height: 400px;
+        top: 10%;
+    }
+}
+@keyframes ani10{
+    to{
+        top: 100%;
+        width: 100px;
+    }
+}
+
+
+

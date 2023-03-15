@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" id="HTML">
+<head>
+    <title>المحاضرات | منصة المداد التعليميه</title>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <meta name="theme-color" content="#8e44ad">
+    <link rel="icon" type="image/png" href="/assets/images/logo.png"/>
+
+    <!-- assets -->
+    <link rel='stylesheet' href='/assets/style/bulma-rtl.min.css'>
+    <link rel='stylesheet' href='/assets/style/main.css'>
+    <link rel='stylesheet' href='/assets/style/nav&footer.css'>
+    <link rel='stylesheet' href='/assets/style/popup.css'>
+    <link rel='stylesheet' href='/assets/style/Lectures.css'>
+    <link rel="stylesheet" href="/assets/style/all.min.css">
+    <link rel="stylesheet" href="/assets/style/preload.css">
+    <link rel="stylesheet" href="/assets/style/keyframes.css">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&display=swap" rel="stylesheet"> 
+
+</head>
+<body onload="preload()">
+
+<!--====================================== PreLoad Bar ========================================-->
+    <div class='Prload' id='Prload'>
+        <div class='one'></div>
+        <div class='two'></div>
+        <div class='three'></div>
+        <div class='four'></div>
+        <div class='five'></div>
+    </div>
+<!--====================================== PreLoad Bar ========================================-->
+
+<!--======================================== Nav Bar ==========================================-->
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+            <a class="navbar-item logo" href="/index.html">
+                <img src="/assets/images/logo.png">
+            </a>
+
+            <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample" onclick="navshow()">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </a>
+        </div>
+    
+        <div id="navbarBasicExample" class="navbar-menu">
+            <div class="navbar-start">
+                <a class="navbar-item" href="/index.html">الرئيسيه</a>
+                <a class="navbar-item" onclick="charge()"><i class="fas fa-wallet"></i>الرصيد<span id="salary">0</span>جنيه</a>
+                <a class="navbar-item">حساب ولي الامر</a>
+            </div>
+
+            <div class="navbar-end">
+                <div class="navbar-item">
+                    <a class="is-purpel is-bell navbar-item" onclick="notificate()"><i class="fas fa-bell"></i></a>
+                    <div class="navbar-item has-dropdown is-hoverable">
+                        <a class="navbar-link is-arrowless"><i class="fas fa-user-circle is-purpel"></i></a>
+                        <div class="navbar-dropdown">
+                            <a class="navbar-item" href="/dashboard/lectures/"><i class="fas fa-tasks is-purpel"></i> محاضراتي</a>
+                            <a class="navbar-item" href="/dashboard/lectures/"><i class="fas fa-heart has-text-danger"></i> المفضله</a>
+                            <a class="navbar-item"><i class="fas fa-envelope has-text-primary"></i> الرسائل</a>
+                            <a class="navbar-item"><i class="fas fa-list has-text-warning"></i> سجل المشتريات</a>
+                            <a class="navbar-item" href="/dashboard/"><i class="fas fa-user-circle has-text-info"></i> الملف الشخصي</a>
+                        </div>
+                    </div>
+                    <div class="buttons">
+                        <a class="button is-purpel is-outlined" href="/login">تسجيل دخول</a>
+                        <a class="button is-primary is-outlined" href="/login/register">حساب جديد</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+<!--======================================== Nav Bar ==========================================-->
+
+<!--======================================== hero Bar ==========================================-->
+    <section class="hero hero-Lect block">
+        <div class="hero-body">
+            <div class="has-text-centered">
+                <h1 class="title is-1 has-text is-purpel">المحاضرات</h1>
+                <div class="has-text-centered">
+                    <a href="/index.html"> الرئيسيه </a> / <span> المحاضرات </span>
+                </div>
+            </div>
+        </div>
+    </section>
+<!--======================================== hero Bar ==========================================-->
+
+<!--======================================== hero Bar ==========================================-->
+    <section class="Cards1 container block">
+        <div class="cards-container columns">
+            <div class="column is-3">
+                <article class="panel">
+                    <p class="panel-heading is-bg-purpel">البحث</p>
+                    <div class="panel-block">
+                      <p class="control has-icons-left">
+                        <input class="input" type="text" placeholder="Search">
+                        <span class="icon is-left">
+                            <i class="fas fa-search"></i></span>
+                      </p>
+                    </div>
+                </article>
+                <article class="panel">
+                    <p class="panel-heading is-bg-purpel">التصنيف</p>
+                    <aside class="menu">
+                        <ul class="menu-list">
+                            <li>
+                                <a onclick="sortShow1()">الصفوف التعليمية <i class="fas fa-angle-left" id="angleL1"></i><i class="fas fa-angle-down" id="angleD1"></i></a>
+                                <ul class="ul1" id="ul1">
+                                    <li><a onclick="sortShow2()">الاول ثانوي <i class="fas fa-angle-left" id="angleL2"></i><i class="fas fa-angle-down" id="angleD2"></i></a></li>
+                                    <ul class="ul2" id="ul2">
+                                        <li><a>الترم الاول</a></li>
+                                        <li><a>الترم الثاني</a></li>
+                                    </ul>
+                                    <li><a onclick="sortShow3()">الثاني ثانوي <i class="fas fa-angle-left" id="angleL3"></i><i class="fas fa-angle-down" id="angleD3"></i></a></li>
+                                    <ul class="ul3" id="ul3">
+                                        <li><a>الترم الاول</a></li>
+                                        <li><a>الترم الثاني</a></li>
+                                    </ul>
+                                    <li><a onclick="sortShow4()">الثالث ثانوي <i class="fas fa-angle-left" id="angleL4"></i><i class="fas fa-angle-down" id="angleD4"></i></a></li>
+                                    <ul class="ul4" id="ul4">
+                                        <li><a>الترم الاول</a></li>
+                                        <li><a>الترم الثاني</a></li>
+                                    </ul>
+                                </ul>
+                            </li>
+                        </ul>
+                      </aside>
+                </article>
+            </div>
+            <div class="column is-9">
+                <div id="Page1" class="PGC">
+                    <div class="row_R">
+                        <div class="card card1" id="card1">
+                            <div class="card-image">
+                                <figure class="image is-3by3">
+                                    <img src="/assets/images/Lecture1.jpg" alt="Placeholder image">
+                                </figure>
+                            </div>
+                            <div class="card-content">
+                                <div class="content">
+                                    <h3 class="title is-5">المراجعة النهائيه</h3>
+                                    <p class="subtitle is-6" id="date"><i class="fas fa-clock"></i> 5 / 10 / 2021</p>
+                                    <p class="subtitle is-4" id="price">60 جنيه</p>
+                                </div>
+                                <div class="content">
+                                    <button class="button is-bg-purpel is-fullwidth">شراء الان</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card card2" id="card2">
+                            <div class="card-image">
+                                <figure class="image is-3by3">
+                                    <img src="/assets/images/Lecture1.jpg" alt="Placeholder image">
+                                </figure>
+                            </div>
+                            <div class="card-content">
+                                <div class="content">
+                                    <h3 class="title is-5">المراجعة النهائيه</h3>
+                                    <p class="subtitle is-6" id="date"><i class="fas fa-clock"></i> 5 / 10 / 2021</p>
+                                    <p class="subtitle is-4" id="price">60 جنيه</p>
+                                </div>
+                                <div class="content">
+                                    <button class="button is-bg-purpel is-fullwidth">شراء الان</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card card3" id="card3">
+                            <div class="card-image">
+                                <figure class="image is-3by3">
+                                    <img src="/assets/images/Lecture1.jpg" alt="Placeholder image">
+                                </figure>
+                            </div>
+                            <div class="card-content">
+                                <div class="content">
+                                    <h3 class="title is-5">المراجعة النهائيه </h3>
+                                    <p class="subtitle is-6" id="date"><i class="fas fa-clock"></i> 5 / 10 / 2021</p>
+                                    <p class="subtitle is-4" id="price">60 جنيه</p>
+                                </div>
+                                <div class="content">
+                                    <button class="button is-bg-purpel is-fullwidth">شراء الان</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card card4" id="card4">
+                            <div class="card-image">
+                                <figure class="image is-3by3">
+                                    <img src="/assets/images/Lecture1.jpg" alt="Placeholder image">
+                                </figure>
+                            </div>
+                            <div class="card-content">
+                                <div class="content">
+                                    <h3 class="title is-5">المراجعة النهائيه</h3>
+                                    <p class="subtitle is-6" id="date"><i class="fas fa-clock"></i> 5 / 10 / 2021</p>
+                                    <p class="subtitle is-4" id="price">60 جنيه</p>
+                                </div>
+                                <div class="content">
+                                    <button class="button is-bg-purpel is-fullwidth">شراء الان</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card card5" id="card5">
+                            <div class="card-image">
+                                <figure class="image is-3by3">
+                                    <img src="/assets/images/Lecture1.jpg" alt="Placeholder image">
+                                </figure>
+                            </div>
+                            <div class="card-content">
+                                <div class="content">
+                                    <h3 class="title is-5">المراجعة النهائيه</h3>
+                                    <p class="subtitle is-6" id="date"><i class="fas fa-clock"></i> 5 / 10 / 2021</p>
+                                    <p class="subtitle is-4" id="price">60 جنيه</p>
+                                </div>
+                                <div class="content">
+                                    <button class="button is-bg-purpel is-fullwidth">شراء الان</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card card6" id="card6">
+                            <div class="card-image">
+                                <figure class="image is-3by3">
+                                    <img src="/assets/images/Lecture1.jpg" alt="Placeholder image">
+                                </figure>
+                            </div>
+                            <div class="card-content">
+                                <div class="content">
+                                    <h3 class="title is-5">المراجعة النهائيه</h3>
+                                    <p class="subtitle is-6" id="date"><i class="fas fa-clock"></i> 5 / 10 / 2021</p>
+                                    <p class="subtitle is-4" id="price">60 جنيه</p>
+                                </div>
+                                <div class="content">
+                                    <button class="button is-bg-purpel is-fullwidth">شراء الان</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card card7" id="card7">
+                            <div class="card-image">
+                                <figure class="image is-3by3">
+                                    <img src="/assets/images/Lecture1.jpg" alt="Placeholder image">
+                                </figure>
+                            </div>
+                            <div class="card-content">
+                                <div class="content">
+                                    <h3 class="title is-5">المراجعة النهائيه</h3>
+                                    <p class="subtitle is-6" id="date"><i class="fas fa-clock"></i> 5 / 10 / 2021</p>
+                                    <p class="subtitle is-4" id="price">60 جنيه</p>
+                                </div>
+                                <div class="content">
+                                    <button class="button is-bg-purpel is-fullwidth">شراء الان</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card card8" id="card8">
+                            <div class="card-image">
+                                <figure class="image is-3by3">
+                                    <img src="/assets/images/Lecture1.jpg" alt="Placeholder image">
+                                </figure>
+                            </div>
+                            <div class="card-content">
+                                <div class="content">
+                                    <h3 class="title is-5">المراجعة النهائيه</h3>
+                                    <p class="subtitle is-6" id="date"><i class="fas fa-clock"></i> 5 / 10 / 2021</p>
+                                    <p class="subtitle is-4" id="price">60 جنيه</p>
+                                </div>
+                                <div class="content">
+                                    <button class="button is-bg-purpel is-fullwidth">شراء الان</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="Page2" class="PGC" style="display:none">
+                    <div class="row_R">
+                        <div class="card card1" id="card1">
+                            <div class="card-image">
+                                <figure class="image is-3by3">
+                                    <img src="/assets/images/Lecture1.jpg" alt="Placeholder image">
+                                </figure>
+                            </div>
+                            <div class="card-content">
+                                <div class="content">
+                                    <h3 class="title is-5">الدروس</h3>
+                                    <p class="subtitle is-6" id="date"><i class="fas fa-clock"></i> 5 / 10 / 2021</p>
+                                    <p class="subtitle is-4" id="price">60 جنيه</p>
+                                </div>
+                                <div class="content">
+                                    <button class="button is-bg-purpel is-fullwidth">شراء الان</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card card2" id="card2">
+                            <div class="card-image">
+                                <figure class="image is-3by3">
+                                    <img src="/assets/images/Lecture1.jpg" alt="Placeholder image">
+                                </figure>
+                            </div>
+                            <div class="card-content">
+                                <div class="content">
+                                    <h3 class="title is-5">الدروس</h3>
+                                    <p class="subtitle is-6" id="date"><i class="fas fa-clock"></i> 5 / 10 / 2021</p>
+                                    <p class="subtitle is-4" id="price">60 جنيه</p>
+                                </div>
+                                <div class="content">
+                                    <button class="button is-bg-purpel is-fullwidth">شراء الان</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card card3" id="card3">
+                            <div class="card-image">
+                                <figure class="image is-3by3">
+                                    <img src="/assets/images/Lecture1.jpg" alt="Placeholder image">
+                                </figure>
+                            </div>
+                            <div class="card-content">
+                                <div class="content">
+                                    <h3 class="title is-5">الدروس</h3>
+                                    <p class="subtitle is-6" id="date"><i class="fas fa-clock"></i> 5 / 10 / 2021</p>
+                                    <p class="subtitle is-4" id="price">60 جنيه</p>
+                                </div>
+                                <div class="content">
+                                    <button class="button is-bg-purpel is-fullwidth">شراء الان</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card card4" id="card4">
+                            <div class="card-image">
+                                <figure class="image is-3by3">
+                                    <img src="/assets/images/Lecture1.jpg" alt="Placeholder image">
+                                </figure>
+                            </div>
+                            <div class="card-content">
+                                <div class="content">
+                                    <h3 class="title is-5">الدروس</h3>
+                                    <p class="subtitle is-6" id="date"><i class="fas fa-clock"></i> 5 / 10 / 2021</p>
+                                    <p class="subtitle is-4" id="price">60 جنيه</p>
+                                </div>
+                                <div class="content">
+                                    <button class="button is-bg-purpel is-fullwidth">شراء الان</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card card5" id="card5">
+                            <div class="card-image">
+                                <figure class="image is-3by3">
+                                    <img src="/assets/images/Lecture1.jpg" alt="Placeholder image">
+                                </figure>
+                            </div>
+                            <div class="card-content">
+                                <div class="content">
+                                    <h3 class="title is-5">الدروس</h3>
+                                    <p class="subtitle is-6" id="date"><i class="fas fa-clock"></i> 7 / 12 / 2021</p>
+                                    <p class="subtitle is-4" id="price">60 جنيه</p>
+                                </div>
+                                <div class="content">
+                                    <button class="button is-bg-purpel is-fullwidth">شراء الان</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card card5" id="card6">
+                            <div class="card-image">
+                                <figure class="image is-3by3">
+                                    <img src="/assets/images/Lecture1.jpg" alt="Placeholder image">
+                                </figure>
+                            </div>
+                            <div class="card-content">
+                                <div class="content">
+                                    <h3 class="title is-5">الدروس</h3>
+                                    <p class="subtitle is-6" id="date"><i class="fas fa-clock"></i> 7 / 12 / 2021</p>
+                                    <p class="subtitle is-4" id="price">60 جنيه</p>
+                                </div>
+                                <div class="content">
+                                    <button class="button is-bg-purpel is-fullwidth">شراء الان</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="Page3" class="PGC" style="display:none">
+                    <div class="row_R">
+                        <div class="card card1" id="card1">
+                            <div class="card-image">
+                                <figure class="image is-3by3">
+                                    <img src="/assets/images/Lecture1.jpg" alt="Placeholder image">
+                                </figure>
+                            </div>
+                            <div class="card-content">
+                                <div class="content">
+                                    <h3 class="title is-5">المحاضرات</h3>
+                                    <p class="subtitle is-6" id="date"><i class="fas fa-clock"></i> 5 / 10 / 2021</p>
+                                    <p class="subtitle is-4" id="price">60 جنيه</p>
+                                </div>
+                                <div class="content">
+                                    <button class="button is-bg-purpel is-fullwidth">شراء الان</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card card2" id="card2">
+                            <div class="card-image">
+                                <figure class="image is-3by3">
+                                    <img src="/assets/images/Lecture1.jpg" alt="Placeholder image">
+                                </figure>
+                            </div>
+                            <div class="card-content">
+                                <div class="content">
+                                    <h3 class="title is-5">المحاضرات</h3>
+                                    <p class="subtitle is-6" id="date"><i class="fas fa-clock"></i> 5 / 10 / 2021</p>
+                                    <p class="subtitle is-4" id="price">60 جنيه</p>
+                                </div>
+                                <div class="content">
+                                    <button class="button is-bg-purpel is-fullwidth">شراء الان</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card card3" id="card3">
+                            <div class="card-image">
+                                <figure class="image is-3by3">
+                                    <img src="/assets/images/Lecture1.jpg" alt="Placeholder image">
+                                </figure>
+                            </div>
+                            <div class="card-content">
+                                <div class="content">
+                                    <h3 class="title is-5">المحاضرات</h3>
+                                    <p class="subtitle is-6" id="date"><i class="fas fa-clock"></i> 5 / 10 / 2021</p>
+                                    <p class="subtitle is-4" id="price">60 جنيه</p>
+                                </div>
+                                <div class="content">
+                                    <button class="button is-bg-purpel is-fullwidth">شراء الان</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card card4" id="card4">
+                            <div class="card-image">
+                                <figure class="image is-3by3">
+                                    <img src="/assets/images/Lecture1.jpg" alt="Placeholder image">
+                                </figure>
+                            </div>
+                            <div class="card-content">
+                                <div class="content">
+                                    <h3 class="title is-5">المحاضرات</h3>
+                                    <p class="subtitle is-6" id="date"><i class="fas fa-clock"></i> 5 / 10 / 2021</p>
+                                    <p class="subtitle is-4" id="price">60 جنيه</p>
+                                </div>
+                                <div class="content">
+                                    <button class="button is-bg-purpel is-fullwidth">شراء الان</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="Page-Swicher is-flex is-justify-content-center">
+                    <div class="button-holder">
+                        <button class="button is-purpel" onclick="PageOpen('Page1')">1</button>
+                        <button class="button is-purpel" onclick="PageOpen('Page2')">2</button>
+                        <button class="button is-purpel" onclick="PageOpen('Page3')">3</button>
+                    </div>
+                </div> 
+            </div>
+        </div>
+    </section>
+<!--======================================== hero Bar ==========================================-->
+
+<!--======================================= footer Bar =========================================-->
+    <footer class="footer">
+        <div class="container has-text-right">
+            <div class="columns">
+                <div class="column is-3">
+                    <img src="/assets/images/logo1.png">
+                    <p class="has-text-right">
+                        منصة المداد التعليمية هي المنصة الخاصة بمستر عبدالله
+                         الشهاوي والتي تقدم لك الشرح المنظّم
+                          والدقيق مع سهولة الوصول لما تحتاجه .
+                    </p>
+                    <div class="location">
+                        <a href="https://maps.app.goo.gl/t2Nj8LMP4xjtj3fq5" class="locationLink" title="سنتر Mars المحلة الكبري ‏ 040 2253747 ‏">
+                            <i class="fas fa-map-marker-alt"></i><label>المحلة الكبرى</label></a>
+                    </div>
+                    <div class="is-flex">
+                        <a href="https://www.facebook.com/medadarabic/" class="social1"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.youtube.com/channel/UCM3DOof443ZI1AYcFJA4dfw" class="social1"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="column is-3">
+                    <h4 class="subtitle is-5">روابط هامة</h4>
+                    <div>
+                        <li><a href="/support/">الدعم الفني</a></li>
+                        <li><a href="/PrivacyPolicy/">سياسة الخصوصية</a></li>
+                        <li><a href="/TermsAndCondition/">الشروط والاحكام</a></li>
+                        <li><a href="/about/">من نحن</a></li>
+                        <li><a href="/contact/">إتصل بنا</a></li>
+                    </div>
+                </div>
+                <div class="column is-3">
+                    <h4 class="subtitle is-5">الملف الشخصى</h4>
+                    <div>
+                        <li><a href="/login/">تسجيل الدخول</a></li>
+                        <li><a href="/login/register">إنشاء حساب</a></li>
+                    </div>
+                </div>
+                <div class="column is-3">
+                    <h4 class="subtitle is-5">إتصل بنا</h4>
+                    <div>
+                        <li><a href="tel:3093004275"><i class="fas fa-phone-alt"></i>3093004275</a></li>
+                        <li><a href="mailto:contact@medadedu.com"><i class="fas fa-envelope"></i>contact@medadedu.com</a></li>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <div class="licens">
+        <div class="container is-fluid">
+            <div class="has-text-centered">
+                <p class="subtitle is-6">
+                    تم تصميم المداد التعليمية بواسطة <a href="https://www.facebook.com/hamza.elkotp.1/">حمزة القطب</a>
+                    والتطوير بواسطة <a href="https://www.linkedin.com/in/mmostafa261">محمد مصطفى</a> <br>
+                    جميع الحقوق محفوظة &copy;
+                </p>
+            </div>
+        </div>
+    </div>
+<!--======================================= footer Bar =========================================-->
+
+
+<!--====================================== charge Pop Up =======================================-->
+    <article class="message charge" id="charge">
+        <div class="message-body">
+            <a href="/charge/"><div class="card">
+                <div class="card-content has-text-centered">
+                    <h3 class="title is-4 is-purpel">شحن المحفظة</h3>
+                </div>
+            </div></a>
+        </div>
+    </article>
+<!--====================================== charge Pop Up =======================================-->
+
+<!--==================================== notificate Pop Up =====================================-->
+    <article class="message notificate" id="notificate">
+        <div class="message-body">
+            <div class="card">
+                <div class="card-content">
+                    <div class="media">
+                        <div class="media-left">
+                            <figure class="image is-48x48">
+                                <img src="https://bulma.io/images/placeholders/96x96.png" alt="Placeholder image">
+                            </figure>
+                        </div>
+                        <a href="#"><div class="media-content">
+                            <p class="is-size-6 title1">المراجعة النهائيه السادسه تم نشرها بواسطة</p>
+                            <div class="labels is-flex">
+                                <p class="is-size-7 has-text-weight-bold DrName" id="DrName">عبدالله الشهاوي</p>
+                                <span class="tag is-bg-purpel is-rounded price" id="price">60 جنيه</span>
+                            </div>
+                        </div></a>
+                    </div>
+                </div>
+                
+                <div class="card-content">
+                    <div class="media">
+                        <div class="media-left">
+                            <figure class="image is-48x48">
+                                <img src="https://bulma.io/images/placeholders/96x96.png" alt="Placeholder image">
+                            </figure>
+                        </div>
+                        <a href="#"><div class="media-content">
+                            <p class="is-size-6 title1">المراجعة النهائيه السادسه تم نشرها بواسطة</p>
+                            <div class="labels is-flex">
+                                <p class="is-size-7 has-text-weight-bold DrName" id="DrName">عبدالله الشهاوي</p>
+                                <span class="tag is-bg-purpel is-rounded price" id="price">60 جنيه</span>
+                            </div>
+                        </div></a>
+                    </div>
+                </div>
+
+                <div class="card-content">
+                    <div class="media">
+                        <div class="media-left">
+                            <figure class="image is-48x48">
+                                <img src="https://bulma.io/images/placeholders/96x96.png" alt="Placeholder image">
+                            </figure>
+                        </div>
+                        <a href="#"><div class="media-content">
+                            <p class="is-size-6 title1">المراجعة النهائيه السادسه تم نشرها بواسطة</p>
+                            <div class="labels is-flex">
+                                <p class="is-size-7 has-text-weight-bold DrName" id="DrName">عبدالله الشهاوي</p>
+                                <span class="tag is-bg-purpel is-rounded price" id="price">60 جنيه</span>
+                            </div>
+                        </div></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </article>
+<!--==================================== notificate Pop Up =====================================-->
+    
+</body>
+</html>
+<script src='/assets/javascript/javascript.js'></script>
+<script src='/assets/javascript/preload.js'></script>
